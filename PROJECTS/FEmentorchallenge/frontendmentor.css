@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    max-width: 876px;
+    padding: 1em;
+}
+
+.in-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+}
+
+
+/* for adjusting the image inside the conatiner */
+
+.dashboard {
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard img {
+    width: 80%;
+}
+
+.top {
+    margin-top: 2em;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    border: 1px solid hsl(223, 100%, 88%);
+    outline: none;
+}
+
+input[type="email"]:invalid {
+    border-color: red;
+}
+
+.notify-me {
+    background-color: hsl(223, 87%, 63%);
+    width: 100%;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.notify-me:hover {
+    transform: translateY(-2px);
+}
+
+
+/* typography */
+
+.grey {
+    font-size: 6vw;
+    color: grey;
+}
+
+.bold {
+    font-size: 6vw;
+    font-weight: bolder;
+}
+
+.span-tag {
+    margin: 1em 0;
+    font-size: 18px;
+    color: grey;
+}
+
+.footer {
+    color: grey;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3em;
+}
+
+.fa i {
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 7px;
+    color: hsl(223, 87%, 63%);
+    font-size: 25px;
+}
+
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 618px) {
+    .grey {
+        font-size: 40px;
+        /*to limit the size of font size */
+    }
+    .bold {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 815px) {
+    .dashboard img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 686px) {
+    .search-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    input[type="email"] {
+        width: 60%;
+        flex: 1;
+    }
+    .notify-me {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1496px) {
+    .container {
+        width: 867px;
+    }
+}

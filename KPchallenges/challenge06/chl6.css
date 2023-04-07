@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* * {
+    outline: 1px solid greenyellow;
+} */
+
+body {
+    margin: 0;
+}
+
+.top {
+    width: 100%;
+    background-color: #f3eed9;
+    padding: 6em;
+}
+
+h1 {
+    color: #834936;
+}
+
+.top-conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 50%;
+    text-align: center;
+    gap: 1em;
+}
+
+.second {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 4em 15em;
+}
+
+.second-cols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+.second h2 {
+    color: #834936;
+}
+
+.second-cols p {
+    padding: 1em;
+}
+
+.third {
+    background-color: #222c2a;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 4em;
+}
+
+.third-col-one {
+    width: 35%;
+}
+
+.third-col-two {
+    width: 35%;
+}
+
+.img {
+    width: 100%;
+}
+
+.third-col-one p {
+    margin-top: 1em;
+}
+
+.fourth {
+    background-color: #824936;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 4em;
+}
+
+.fourth-col-one {
+    width: 35%;
+}
+
+.fourth-col-two {
+    width: 35%;
+}
+
+.img {
+    width: 100%;
+}
+
+.fourth-col-one p {
+    margin-top: 1em;
+}

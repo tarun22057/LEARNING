@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-bar {
+    font-size: 1.5em;
+    color: white;
+    padding: auto;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 2.5em;
+}
+
+.nav-bar a {
+    /*anchor tags inside navbar*/
+    text-decoration: none;
+    color: white;
+}
+
+.s:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.span-tag {
+    /*  inorder to provide gap at the left and right of the ' | ' symbol on the nav bar */
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.inner-navbar-left-part {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 0.5em;
+}
+
+.inner-navbar-right-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    width: 33%;
+    padding: 0.5em;
+}
+
+.nav-button-one-container {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-right: 1em;
+    padding: 1em 0.5em;
+    font-size: 1.5rem;
+    width: 55%;
+}
+
+.nav-button-two-container {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c5fd5;
+    padding: 1em 0.5em;
+    border: 1px;
+    border-radius: 10px;
+    width: 30%;
+    margin-right: 1em;
+    font-size: 1.5rem;
+    transition: background-color 5ms ease-in;
+}
+
+.nav-button-two-container:hover {
+    background-color: white;
+}
+
+.nav-button-two-container:hover a {
+    color: black;
+}
+
+.mid-part {
+    background-color: #dadbf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 2em;
+}
+
+.mid-part-section {
+    padding: 1rem 0;
+    width: 50%;
+}
+
+.how-can-we-help {
+    border: 1px soild green;
+    font-family: "GT America Standard", sans-serif;
+    color: #000000;
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.search-bar {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 9px 14px 0 rgb(0 0 0 / 10%);
+}
+
+input[type="text"] {
+    flex: 1;
+    border: 0;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.second-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 6em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.inside-grid-conatiner {
+    padding: 1.5em 1.2em;
+    display: flex;
+    flex-direction: row;
+    font-family: Robot;
+    font-size: 1.5rem;
+}
+
+.inside-grid-conatiner img {
+    height: 68px;
+    width: 68px;
+    margin-right: 1.5em;
+}
+
+.inside-div-conatiner-text h2 {
+    margin-bottom: 0.5em;
+}
+
+.inside-div-conatiner-text p {
+    margin-bottom: 0.5em;
+}
+
+.inside-grid-conatiner a {
+    text-decoration: none;
+}
+
+.inside-grid-conatiner a:hover {
+    text-decoration: underline;
+}
+
+.foot {
+    background-color: black;
+    color: white;
+    padding: 3em 5em;
+}
+
+.foot-conatiner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.foot-conatiner-content h2 {
+    padding-bottom: 1.1em;
+}
+
+.foot-conatiner-content li {
+    padding-bottom: 0.5em;
+}
+
+.footer-end {
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.foot ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot a {
+    text-decoration: none;
+    color: white;
+}
+
+.foot a:hover {
+    text-decoration: underline;
+}

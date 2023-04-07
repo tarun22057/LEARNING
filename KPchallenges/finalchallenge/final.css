@@ -1,0 +1,362 @@
+/* Challenge
+
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.nav__item {
+    margin-bottom: 0.5em;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__link--button {
+    color: white;
+    background-color: #a59678;
+    border-radius: 100px;
+    padding: 0.25em 0.5em;
+}
+
+.section-title {
+    color: #a59678;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    background-color: #a59678;
+    padding: 0.75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: 0.75;
+}
+
+.mid {
+    background-color: #6f737f;
+}
+
+.three-cols {
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 2em;
+    padding: 2em;
+}
+
+.cols {
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+.cols h3 {
+    color: #a59678;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
+}
+
+header {
+    background: #2e323f;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072a2d;
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: 0.75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
+
+.nav__list {
+    align-self: center;
+}
+
+.logo {
+    height: 30px;
+    align-self: center;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #3b4050;
+    color: #fff;
+}
+
+.hero__text h1 {
+    font-size: 5.125rem;
+}
+
+.hero__img {
+    margin-top: 2em;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #fff;
+}
+
+.side-bar--three--cols {
+    background-color: #3b4050;
+    padding: 1em;
+}
+
+.footer {
+    padding: 2em;
+    background-color: #2e323f;
+    margin: 2em 0;
+}
+
+.footer h2 {
+    font-size: 2.1rem;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+.four-cols-conatiner h4 {
+    color: #a59678;
+}
+
+.four-cols-conatiner ul li {
+    list-style: none;
+}
+
+.footer-nav-links {
+    color: white;
+    text-decoration: none;
+    transform: opacity 450ms ease-in-out 250ms;
+}
+
+.footer-nav-links:hover {
+    opacity: 0.6;
+}
+
+.four-cols-one p {
+    color: white;
+}
+
+.sec-col {
+    display: flex;
+    flex-grow: 1;
+    gap: 2em;
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .four-cols-conatiner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-grow: 1;
+        gap: 4em;
+        padding: 1em;
+    }
+    .footer h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .four-cols-one {
+        max-width: 40%;
+    }
+    .sec-col {
+        display: flex;
+        gap: 3em;
+    }
+    .sidebar {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav-conatiner {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+    .nav {
+        visibility: visible;
+        max-width: 550px;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    .nav__list {
+        display: flex;
+        flex-grow: 1;
+        gap: 1.5em;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero__text {
+        display: flex;
+        gap: 1.1em;
+    }
+    .hero__text--col {
+        margin-top: 10em;
+    }
+    .hero__img {
+        width: 90%;
+        align-self: flex-start;
+        margin: 1em 0;
+    }
+    .primary-content {
+        width: 62%;
+    }
+    .sidebar {
+        width: 32%;
+    }
+    .logo {
+        padding: 0 0.8em;
+        align-self: center;
+    }
+    .four-cols-conatiner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-grow: 1;
+        gap: 4em;
+        padding: 1em;
+    }
+    .footer h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .four-cols-one {
+        max-width: 40%;
+    }
+    .sec-col {
+        display: flex;
+        gap: 3em;
+    }
+}
